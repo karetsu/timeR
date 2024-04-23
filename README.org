@@ -1,0 +1,11 @@
+#+title: timeR
+#+subtitle: R functions to test system performance
+
+This is for my own personal use and is not expected to amount to much. I'm certain it isn't written or performed optimally,
+
+* Notes on previously seen code examples
+** Benchmark design
+~Sys.time~ is not particularly precise. It is advisable to run anything which uses is multiple times and take an average across them or use the ~microbenchmark~ package instead as it has become something of the standard way to do it.
+
+** Additional considerations
+Lots of the suite tests library loading, data read, data write and similar. These are functions of disk IO speed and RAM speed. As such we will write three different testing suites: IO read, IO write and computation.

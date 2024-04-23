@@ -1,0 +1,17 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.git.*$
+^\.gitlab-ci\.yml$
+^CHANGELOG\.md$
+^CONTRIBUTING\.md$
+^\.envrc$
+^.*\.nix$
+^.*flake.*$
+^.*\.org$
+^scripts$
+^.*\.toml$
+^.*\.gitkeep$
+^\.lintr$
+^LICENSE.md$
+^examples$
+^log$

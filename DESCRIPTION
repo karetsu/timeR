@@ -1,0 +1,25 @@
+Package: timeR
+Title: R functions to test system performance
+Version: 0.0.1
+Authors@R: 
+    person("Gareth", "Clews", ,"20670199+karetsu@users.noreply.github.com", role = c("aut", "cre"))
+Maintainer@R:
+    person("Gareth", "Clews", , "20670199+karetsu@users.noreply.github.com")
+Description:
+    A suite of functions for benchmarking hardware performance.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Suggests:
+    devtools (>= 2.4.5),
+    usethis (>= 2.2.2),
+    testthat (>= 3.0.0),
+    quickcheck (>= 0.1.2),
+    knitr (>= 1.4.5),
+    rmarkdown (>= 2.26)
+Depends:
+    purrr (>= 1.0.2),
+    dplyr (>= 1.1.4)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
