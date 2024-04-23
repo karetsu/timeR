@@ -1,7 +1,7 @@
 #+title: timeR
 #+subtitle: R functions to test system performance
 
-This is for my own personal use and is not expected to amount to much. I'm certain it isn't written or performed optimally,
+This is for my own personal use and is not expected to amount to much. I'm certain it isn't written or performed optimally, and that's okay. I just want the same functions to run across multiple machines with a good benchmarking suite integrated.
 
 * Notes on previously seen code examples
 ** Benchmark design
