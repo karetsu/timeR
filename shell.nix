@@ -13,5 +13,11 @@ pkgs.mkShell {
       microbenchmark
       knitr
       rmarkdown
+
+      # old benchmarks
+      survey
+      srvyr
+      lme4
+      lmerTest
     ];
 }

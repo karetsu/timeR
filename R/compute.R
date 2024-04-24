@@ -1,9 +1,13 @@
-#' Computation profiling
+#' Computation benchmarking
 #'
-#' @param n   The number of times to perform the benchmark
-#' @param ... Provide additional arbitrary functions to test
+#' @param scheme  One of "large", "medium" or "small" describing the scale of
+#'                the benchmark. This scales the number of tests as well as the
+#'                amount of data used in some of them.
+#' @param ...     Provide additional arbitrary functions to test
 #'
-compbench <- function(n = 100, ...) {
+compbench <- function(scheme = "small", ...) {
+  if (scheme == "small") n <- 100
+
   # initial example
   r <- 10000
   p <- 100
