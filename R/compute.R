@@ -1,3 +1,7 @@
+# Computational benchmarking suite
+
+# ── scheme handlers ────────────────────────────────────────────────────────────
+
 #' Computation benchmarking
 #'
 #' @param scheme  One of "large", "medium" or "small" describing the scale of
@@ -5,14 +9,14 @@
 #'                amount of data used in some of them.
 #' @param ...     Provide additional arbitrary functions to test
 #'
-compbench <- function(scheme = "small", ...) {
-  if (scheme == "small") n <- 100
+bench <- function(scheme, ...) {
+
 
   # initial example
   r <- 10000
   p <- 100
   X <- matrix(rnorm(r*p), r, p)
-  Y <- X %*% rnorm(p) + rnorm(100)
+  y <- X %*% rnorm(p) + rnorm(100)
 
   microbenchmark::microbenchmark(
      "lm"            = { b <- lm(y ~ X + 0)$coef },
@@ -20,4 +24,21 @@ compbench <- function(scheme = "small", ...) {
      "linear system" = { b <- solve(t(X) %*% X, t(X) %*% y) },
      times           = n
   )
+}
+
+
+schemes <- list( small  = NA
+               , medium = NA
+               , large  = NA
+               )
+# ── function specifications ────────────────────────────────────────────────────
+
+#' A simple linear regression benchmark
+#, config'
+#'
+#' Benchmarking a simple linear regression using lm()
+#'
+#' @param data a matrix which is of different sizes for different schemes
+bench_lm <- function(data) {
+  r <-
 }

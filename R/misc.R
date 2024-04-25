@@ -1,6 +1,7 @@
 # Miscellaneous functions provided to support the exported functions
 #+NOTE: none of these functions are exported
 
+
 #' Writing a fixed width bar
 #, config'
 #'
